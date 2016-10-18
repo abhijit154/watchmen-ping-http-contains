@@ -19,7 +19,7 @@ PingService.prototype.ping = function(service, callback){
   if (!service.pingServiceOptions || !service.pingServiceOptions['http-contains'] ||
       !service.pingServiceOptions['http-contains'].contains ||
       !service.pingServiceOptions['http-contains'].contains.value) {
-    callback('http-contains plugin configuration is missing');
+   return callback('http-contains plugin configuration is missing');
   }
 
   var contains = service.pingServiceOptions['http-contains'].contains.value;
